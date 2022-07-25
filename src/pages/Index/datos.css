@@ -1,0 +1,70 @@
+
+.my-card{
+  height: 250px;
+  width: 250px;
+  box-shadow: 1px 1px 1px rgb(73, 73, 73),2px 2px 2px rgb(255, 255, 255),
+  3px 3px 3px rgb(42, 41, 41),4px 4px 2px rgb(255, 255, 255),5px 5px 2px rgb(15, 15, 15);
+  overflow: hidden;
+}
+
+.marca{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top:0;
+  left: -60px;
+  width: 100%;
+  transform: rotate(-45deg);
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 1px rgb(73, 73, 73),2px 2px 2px rgb(255, 255, 255),
+  3px 3px 3px rgb(42, 41, 41),4px 4px 2px rgb(255, 255, 255),5px 5px 2px rgb(15, 15, 15);
+}
+
+.tecnologias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.tecnologias::before{
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-image: linear-gradient(
+    to right,
+    rgb(57, 149, 206)10%,
+    rgb(19, 19, 20)20%,
+    transparent
+  );
+  text-shadow: 1px 1px black;
+  animation: animar_tecnologias 3s;
+}
+.tecnologias2{
+  display: flex;
+  transition: 3s;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 4px black,4px 4px 1px rgb(60, 77, 98);
+
+
+
+}
+
+
+@keyframes animar_tecnologias{
+  from{
+
+    transform: translate(-400%);
+    text-shadow: 1px 1px 3px black;
+  }
+  to{
+    transform: translate(400%);
+    text-shadow: 1px 1px 3px black;
+  }
+}

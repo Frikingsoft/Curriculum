@@ -1,0 +1,167 @@
+.banner {
+  height: 400px;
+  background-image: url('/imagenes/banner.png');
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px rgb(31, 31, 31);
+}
+
+.menu {
+  position: fixed;
+  height: 60px;
+  z-index: 1;
+  background-color: rgba(31, 31, 31, 0.518);
+  border: 1px solid grey;
+  box-shadow: 2px 2px 2px rgb(255, 255, 255),
+    3px 3px 3px rgb(42, 41, 41), 4px 4px 2px rgb(255, 255, 255), 5px 5px 2px rgb(15, 15, 15);
+}
+
+.titulo{
+  height: 100%;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  text-shadow: 2px 2px 2px rgb(65, 65, 65),
+  3px 3px 3px rgb(239, 238, 238),4px 4px 2px rgb(15, 15, 15),5px 5px 2px rgb(15, 15, 15);
+}
+.botones_menu{
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botones_menu a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.botones_menu a:hover::after{
+  position: absolute;
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px white;
+  animation: animar2 1s linear infinite;
+}
+.botones_menu a::before{
+  position: absolute;
+
+  width: 50px;
+  height: 50px;
+  background-size:100% 100%;
+  animation: animar 2s linear infinite;
+  box-shadow: 2px 2px 1px rgba(100, 154, 190);
+  border-radius: 50%;
+}
+.botones_menu a:hover::before{
+  content: " ";
+}
+.tecnologias{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin-top: 80px;
+
+}
+
+
+.circulo_javascript{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('/imagenes/vue.png');
+  background-size: 100% 100%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px white;
+  border: 1px solid white;
+  animation: animarjs 5s alternate-reverse infinite;
+
+}
+.circulo_javascript::before{
+  content:  " ";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  box-shadow: 1px 1px 3px rgb(219, 219, 219);
+  border-radius: 50%;
+  animation: animar 1s infinite linear;
+
+}
+.circulo_javascript::after{
+  content:  " ";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  box-shadow: 1px 1px 3px rgb(230, 229, 229);
+  border-radius: 50%;
+  animation: animar2 1s infinite linear;
+
+}
+@keyframes animar {
+   from{
+    transform:rotate(0deg)
+   }
+   to{
+    transform:rotate(360deg)
+   }
+}
+@keyframes animar2 {
+  from{
+   transform:rotate(0deg);
+  }
+  to{
+   transform:rotate(-360deg)
+  }
+}
+
+@keyframes animarjs {
+  0%{
+    transform: rotate(0);
+
+  }
+  20% {
+
+    transform: rotate(270deg);
+    opacity: .1;
+  }
+  40%{
+    transform: rotate(45deg);
+    margin-left: -20px;
+    margin-top: 20px;
+  }
+  85% {
+
+    transform: rotate(45deg);
+    margin-left: -100px;
+
+  }
+  100%{
+    margin-left: -800px;
+    margin-top: 350px;
+  }
+
+
+}
+
+
